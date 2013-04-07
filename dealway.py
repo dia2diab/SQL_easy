@@ -4,7 +4,7 @@
 #written by DiaaDiab
 
 from settings import *
-from hashes import Encrypt, Decrypt
+#from hashes import Encrypt, Decrypt
 import sys
 import os
 import readline
