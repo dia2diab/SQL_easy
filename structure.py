@@ -57,7 +57,7 @@ class Structure(object):
 		cons = 0
 
 		for i in range(number_Of_fields):
-			fieled_name = raw_input('>>', 'green')
+			fieled_name = raw_input('>>')
 
 			if cons == number_Of_fields -1:
 				MySQL_Query += ', %s TEXT(200))' % fieled_name
