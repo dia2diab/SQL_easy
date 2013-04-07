@@ -30,17 +30,3 @@ easy way to deal with MYSQL server by using commands on terminal
     *
     `{1} directories, {6} files `
 
-
-
-   
-# links #
----
-
-[Python]:  http://www.python.org/download/ 
-[MySQL ]:  http://mysql.com/downloads
-[MySQL ]:  http://dev.mysql.com/doc/refman/5.1/en/tutorial.html
-[MySQL ]:  http://www.planetmysql.org
-
-
-
-
