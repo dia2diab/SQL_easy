@@ -44,14 +44,14 @@ class Dealing(object):
 		for i in range(numFields.bit_length()):
 			fields.append(self.Cursor.fetchone()[0])
 		fields_tuple = tuple(fields)
-		choice = int(raw_input(colored('[-]You have {0} choose by number to edit field: '.format(fields_tuple), 'green')))
+		choice = int(raw_input('[-]You have {0} choose by number to edit field: '.format(fields_tuple)))
 		if choice in range(1, len(fields)+1):
 			field_update = fields[choice - 1]
-			fieldName = raw_input(colored('[+]Enter %s that you want update: ' % field_update, 'green'))
+			fieldName = raw_input('[+]Enter %s that you want update: ' % field_update)
 			fieldName = '\'' + fieldName + '\''
-			ch = int(raw_input(colored('[+]Enter field that you want to update it from {0}: '.format(fields_tuple), 'green')))
+			ch = int(raw_input('[+]Enter field that you want to update it from {0}: '.format(fields_tuple)))
 			field_up = fields[ch - 1]
-			qu = raw_input(colored('[+]Enter %s that you want update: ' % field_up, 'green'))
+			qu = raw_input('[+]Enter %s that you want update: ' % field_up)
 			qu = '\'' + qu + '\''
 			try:
 				MySQL_Query = "update %s set %s=%s where %s=%s" % (TableName, field_up, qu, field_update, fieldName)
@@ -60,7 +60,7 @@ class Dealing(object):
 				self.MyConnection.commit()
 				print '[*]Already Update.'
 			except:
-				cprint('[--]You have SQL error !!', 'blue')
+				print '[--]You have SQL error !!'
 		else:
 			print '[--]SyStem Error !!'
 			print '[**]Your Entered is wrong !!'
@@ -70,16 +70,16 @@ class Dealing(object):
 	def Add(self, TableName):
 		numFields = self.Cursor.execute('show columns from %s' % TableName)
 		fields = []
-		for i in range(numFields.bit_length()):
+		for i in range(numFields.bit_length() + 1):
 			fields.append(self.Cursor.fetchone()[0])
 		data = {}
-		data_tuple = ()
+		data_tuple = ('',)
 		for field in fields:
 			if field != 'Id':
 				data[field] = raw_input('[*]Enter {0}: '.format(field))
-				data_tuple += (data[field], )
+		                data_tuple += (data[field], )
 		try:
-			MySQL_Query = "insert into %s values %s" % (TableName,   data_tuple)
+			MySQL_Query = "insert into %s values %s" % (TableName,  data_tuple)
 			self.Cursor.execute(MySQL_Query)
 			self.MyConnection.commit()
 			print '[*]Addition Done.'
@@ -94,10 +94,10 @@ class Dealing(object):
 		for i in range(numFields.bit_length()):
 			fields.append(self.Cursor.fetchone()[0])
 		fields_tuple = tuple(fields)
-		choice = int(raw_input(colored('[-]You have {0} choose by number: '.format(fields_tuple), 'green')))
+		choice = int(raw_input('[-]You have {0} choose by number: '.format(fields_tuple)))
 		if choice in range(1, len(fields)+1):
 			field_deleted = fields[choice - 1]
-			fieldName = raw_input(colored('[+]Enter %s that you want to delete: ' % field_deleted), 'green')
+			fieldName = raw_input('[+]Enter %s that you want to delete: ' % field_deleted)
 			fieldName = '\'' + fieldName + '\''
 			try:
 				MySQL_Query = "delete from %s where %s=%s" % (TableName, field_deleted, fieldName)
@@ -120,10 +120,10 @@ class Dealing(object):
 		for i in range(numFields.bit_length()):
 			fields.append(self.Cursor.fetchone()[0])
 		fields_tuple = tuple(fields)
-		choice = int(raw_input(colored('[-]You have {0} choose by number: '.format(fields_tuple), 'green')))
+		choice = int(raw_input('[-]You have {0} choose by number: '.format(fields_tuple)))
 		if choice in range(1, len(fields)+1):
 			field_deleted = fields[choice - 1]
-			fieldName = raw_input(colored('[+]Enter %s that you want to Show: ' % field_deleted, 'green'))
+			fieldName = raw_input('[+]Enter %s that you want to Show: ' % field_deleted)
 			fieldName = '\'' + fieldName + '\''
 			try:
 				'mysql -u%s -p%s --execute="use %s;select * from %s;"' % (UserName, PassWord, db_name, TableName)
