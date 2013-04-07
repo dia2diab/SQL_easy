@@ -7,6 +7,7 @@ from dealway import Dealing
 from settings import *
 from structure import Structure
 from hashes import Encrypt, Decrypt, Info
+import readline
 
 class SQL_easy(object):
 

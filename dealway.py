@@ -7,7 +7,7 @@ from settings import *
 from hashes import Encrypt, Decrypt
 import sys
 import os
-
+import readline
 
 class Dealing(object):
 

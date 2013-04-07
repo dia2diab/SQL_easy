@@ -7,7 +7,7 @@ import sys
 from settings import *
 import os
 from dealway import *
-
+import readline
 
 
 class Structure(object):

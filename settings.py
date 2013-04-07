@@ -4,13 +4,13 @@
 #written by DiaaDiab
 
 import sys
-
+import readline
 
 try:
 	import MySQLdb
 except:
 	print '[*]Install Module <MySQL> for python.'
-
+        sys.exit()
 
 HostName = None   # remove None and set your host of MySQL server
 UserName = None   # remove None and set user of MySQL server
