@@ -51,13 +51,13 @@ class Structure(object):
 
 	def Create_table(self, t_name):
 		print '[!!]please never make id, it will make automatic by programme.'
-		number_Of_fields = int(raw_input(colored('How man field you want to make in your table!!: ', 'green')))
+		number_Of_fields = int(raw_input('How man field you want to make in your table!!: '))
 		print '[+]Enter your fields following by press enter button after every field.'
 		MySQL_Query = '(Id INT PRIMARY KEY AUTO_INCREMENT'
 		cons = 0
 
 		for i in range(number_Of_fields):
-			fieled_name = raw_input(colored('>>', 'green'))
+			fieled_name = raw_input('>>', 'green')
 
 			if cons == number_Of_fields -1:
 				MySQL_Query += ', %s TEXT(200))' % fieled_name
