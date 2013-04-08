@@ -31,12 +31,14 @@ class SQL_easy(object):
 		print '***********Choose By Number***********'
 
         def repeat(self):
-            ch = raw_input('[**]Y-Continue, else-Exit:')
+            ch = raw_input('[**](Q)uite, else Continue: ')
             ch = ch.lower()
-            if ch == 'y':
-                self.MySQL_Screen()
-            else:
+            if ch == 'q':
                 sys.exit()
+            else:
+                self.MySQL_Screen()
+
+                
 
 def main():
         print '''
@@ -125,4 +127,9 @@ def main():
         
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print 
+        print '[-]Bye'
+        sys.exit()
