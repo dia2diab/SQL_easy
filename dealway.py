@@ -31,7 +31,8 @@ class Dealing(object):
 		global UserName
 		global PassWord
 
-		statement = 'mysql -u%s -p%s --execute="use %s;select * from %s;"' % (UserName, PassWord, db_name, TableName)
+		statement = 'mysql -u%s -p%s --execute="use %s;select * from %s;"' % (UserName,
+                        PassWord, db_name, TableName)
 		try:
 			print '[*]All Record in your Table.'
 			os.system(statement)
@@ -54,7 +55,8 @@ class Dealing(object):
 			qu = raw_input('[+]Enter %s that you want update: ' % field_up)
 			qu = '\'' + qu + '\''
 			try:
-				MySQL_Query = "update %s set %s=%s where %s=%s" % (TableName, field_up, qu, field_update, fieldName)
+				MySQL_Query = "update %s set %s=%s where %s=%s" % (TableName,
+                                        field_up, qu, field_update, fieldName)
 				self.Cursor.execute(MySQL_Query)
 				array = self.Cursor.fetchall()
 				self.MyConnection.commit()
@@ -126,9 +128,10 @@ class Dealing(object):
 			fieldName = raw_input('[+]Enter %s that you want to Show: ' % field_deleted)
 			fieldName = '\'' + fieldName + '\''
 			try:
-				'mysql -u%s -p%s --execute="use %s;select * from %s;"' % (UserName, PassWord, db_name, TableName)
-				statement = 'mysql -u%s -p%s --execute="use %s;select * from %s where %s=%s;"' % (UserName, PassWord, db_name, 
-					TableName, field_deleted, fieldName)
+				'mysql -u%s -p%s --execute="use %s;select * from %s;"' % (UserName,
+                                        PassWord, db_name, TableName)
+				statement = 'mysql -u%s -p%s --execute="use %s;select * from %s where %s=%s;"' % (UserName,
+                                        PassWord, db_name, TableName, field_deleted, fieldName)
 				print '[*]Your Record.'
 				os.system(statement)
 			except:
