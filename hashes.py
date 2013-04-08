@@ -38,29 +38,8 @@ def Decrypt(algo, hashed):
 	if algo == 'type7':
 		return str(cisco_type7.decode(hashed))
 
-def Info():
-	'''this is information about previouse functions'''
-
-	print '--------------------'
-	print 'hashes.py :'
-	print 'Part Of <SQL_easy>'
-	print '--------------------'
-	print 'Consist Of:'
-	print '1-Encrypt function'
-	print '''
-		this function encrypt text that going
-		to database to hashes for security it
-		follow some Algorithms that go on (Two-Way)
-		such as {base64, asciiHex, type7}.'''
-	print '2-Decrypt function'
-	print '''
-		this function decrypt hashes that comming
-		from database to your text follow. '''
-
-
 def main():
-	Info()
-
+    pass
 
 if __name__ == '__main__':
 	main()
