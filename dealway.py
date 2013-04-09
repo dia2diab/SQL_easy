@@ -128,11 +128,9 @@ class Dealing(object):
 			fieldName = raw_input('[+]Enter %s that you want to Show: ' % field_deleted)
 			fieldName = '\'' + fieldName + '\''
 			try:
-				'mysql -u%s -p%s --execute="use %s;select * from %s;"' % (UserName,
-                                        PassWord, db_name, TableName)
 				statement = 'mysql -u%s -p%s --execute="use %s;select * from %s where %s=%s;"' % (UserName,
                                         PassWord, db_name, TableName, field_deleted, fieldName)
-				print '[*]Your Record.'
+                                print '[*]Your Record: '
 				os.system(statement)
 			except:
 				print '[--]SyStem Error !!'
