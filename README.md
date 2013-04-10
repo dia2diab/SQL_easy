@@ -5,8 +5,7 @@ easy way to deal with MYSQL server by using commands on terminal
 # Info #
 ---
 
-    - <SQL_easy> for normal user to deal with databases without writing 
-    	sql syntax 
+    - <SQL_easy> for normal user to deal with databases without writing sql syntax 
 
     - <SQL_easy> execute SQL syntax from server and give results 
 
@@ -14,7 +13,10 @@ easy way to deal with MYSQL server by using commands on terminal
     	encode passwords by some algorithms and filter the Query to prenvent SQL-injection
 
 
-
+# Dependencies #
+---
+[Python][] **is required**
+To install it from [Python][]'s site **OR** `sudo (apt-get|yum) install python ` for linux.
 
 # structure #
 ---
