@@ -32,3 +32,5 @@ To install it from [Python][]'s site **OR** `sudo (apt-get|yum) install python `
     *
     `{1} directories, {6} files `
 
+
+[Python]: http://www.python.org/download/
