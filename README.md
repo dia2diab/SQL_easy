@@ -18,6 +18,9 @@ easy way to deal with MYSQL server by using commands on terminal
 [Python][] **is required**
 To install it from [Python][]'s site **OR** `sudo (apt-get|yum) install python ` for linux.
 
+[MySQLdb][] library for Python **is required**
+To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mysqldb*` install  for linux. 
+
 # structure #
 ---
 [SQL_easy][]
@@ -34,3 +37,4 @@ To install it from [Python][]'s site **OR** `sudo (apt-get|yum) install python `
 
 
 [Python]: http://www.python.org/download/
+[MySQLdb]: http://www.codegood.com/archives/129
