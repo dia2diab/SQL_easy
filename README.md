@@ -21,7 +21,7 @@ To install it from [Python][]'s site **OR** `sudo (apt-get|yum) install python `
 [MySQLdb][] library for Python **is required**
 To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mysqldb*` install  for linux. 
 
-# structure #
+# Structure #
 ---
 [SQL_easy][]
 .
@@ -34,7 +34,13 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
 └── `/dump`
     *
     `{1} directories, {6} files `
+# Screen Shot #
+---
+The first time you run application:
+![My image](http://s7.postimg.org/jjzlxiwej/without_setting.png)
 
+After configure settings.py:
+![My image](http://s11.postimg.org/766esydcz/with_settings.png)
 
 [Python]: http://www.python.org/download/
 [MySQLdb]: http://www.codegood.com/archives/129
