@@ -51,6 +51,14 @@ def Rm_sulting(hashed):
     return data
 
 
+def _to_db(data):
+    return Sulting(Hashing(data))
+
+
+def _from_db(data):
+    return Cracking(Rm_sulting(data))
+
+
 def main():
     pass
 

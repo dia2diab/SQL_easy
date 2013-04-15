@@ -2,8 +2,8 @@
 
 #This script is a part of SQL_easy
 #written by DiaaDiab
+
 from settings import *
-#from hashes import Encrypt, Decrypt
 import os
 import readline
 
