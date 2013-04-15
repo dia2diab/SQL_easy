@@ -4,45 +4,55 @@
 #written by DiaaDiab
 
 
-import sys
-
-try:
-	from passlib.hash import cisco_type7
-except:
-	print '[*]Install Module <passlib> for python.'
-	sys.exit()
-
-
 def Encrypt(algo, text):
-	'''(algo, text) > hashes'''
+    '''(algo, text) > hashes'''
 
-	if algo == 'base64':
-		return text.encode('base64')
+    if algo == 'base64':
+        return text.encode('base64')
 
-	if algo == 'asciiHex':
-		return text.encode('hex')
-
-	if algo == 'type7':
-		return cisco_type7.encrypt(text)
+    if algo == 'asciiHex':
+        return text.encode('hex')
 
 
 def Decrypt(algo, hashed):
-	'''(algo, hashed) > text'''
+    '''(algo, hashed) > text'''
 
-	if algo == 'base64':
-		return hashed.decode('base64')
+    if algo == 'base64':
+        return hashed.decode('base64')
 
-	if algo == 'asciiHex':
-		return hashed.decode('hex')
+    if algo == 'asciiHex':
+        return hashed.decode('hex')
 
-	if algo == 'type7':
-		return str(cisco_type7.decode(hashed))
+
+def Hashing(data):
+    '''(data) > hashed'''
+    hashed = Encrypt('base64', data)
+    hashed = Encrypt('asciiHex', hashed)
+    return hashed
+
+
+def Cracking(hash):
+    '''(hashed) > data'''
+    data = Decrypt('asciiHex', hash)
+    data = Decrypt('base64', data)
+    return data
+
+
+def Sulting(data):
+    '''(data) > sulted'''
+    sult = '5a476c685953426b615746690a'
+    sulted = data[0] + sult + data[1:]
+    return sulted
+
+
+def Rm_sulting(hashed):
+    '''(hashed) > data'''
+    data = hashed[0] + hashed[27:]
+    return data
+
 
 def main():
     pass
 
 if __name__ == '__main__':
-	main()
-
-
-
+    main()
