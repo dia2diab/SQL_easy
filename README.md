@@ -37,10 +37,16 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
 # Screen Shot #
 ---
 The first time you run application:
-![My image](http://s7.postimg.org/jjzlxiwej/without_setting.png)
+![My image](http://s14.postimg.org/bqc8mk7ch/SQL_1.png)
 
-After configure settings.py:
-![My image](http://s11.postimg.org/766esydcz/with_settings.png)
+After set configuration settings.py and this is the main screen of app:
+![My image](http://s10.postimg.org/llfx4lv6x/SQL_2.png)
+
+Application when it is running and showing databases on server:
+![My image](http://s22.postimg.org/dupc0yodt/SQL_3.png)
+
+After using you database and this is the secondary screen of app:
+![My image](http://s21.postimg.org/moogj9fqf/SQL_4.png)
 
 [Python]: http://www.python.org/download/
 [MySQLdb]: http://www.codegood.com/archives/129
