@@ -132,6 +132,9 @@ def main():
                 if ch == '8':
                     showing.MySQL_Screen_1()
                     break
+                if ch == '0':
+                    print '[**]bye'
+                    sys.exit()
 
         if ch == '5':
             struc.SQL_Shell()
