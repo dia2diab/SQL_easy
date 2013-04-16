@@ -65,16 +65,20 @@ class Dealing(object):
     def Add(self, TableName):
         numFields = self.Cursor.execute('show columns from %s' % TableName)
         fields = []
-        for i in range(numFields.bit_length() + 1):
+        for i in range(numFields.bit_length() + 2):
             fields.append(self.Cursor.fetchone()[0])
         data = {}
-        data_tuple = ('',)
+        data_tuple = ()
         for field in fields:
             if field != 'Id':
                 data[field] = raw_input('[*]Enter {0}: '.format(field))
                 data_tuple += (data[field], )
+        fields.remove('Id')
+        fields = tuple(fields)
         try:
-            MySQL_Query = "insert into %s values %s" % (TableName,  data_tuple)
+            MySQL_Query = "insert into %s %s values %s" % (TableName, fields, data_tuple)
+            print MySQL_Query
+            exit()
             self.Cursor.execute(MySQL_Query)
             self.MyConnection.commit()
             print '[*]Addition Done.'
