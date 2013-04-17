@@ -5,11 +5,11 @@ easy way to deal with MYSQL server by using commands on terminal
 # Info #
 ---
 
-    - <SQL_easy> for normal user to deal with databases without writing sql syntax 
+    - <SQL_easy> for normal user to deal with databases without writing sql syntax
 
-    - <SQL_easy> execute SQL syntax from server and give results 
+    - <SQL_easy> execute SQL syntax from server and give results
 
-    - <SQL_easy> not complete yet Soon i will add some Features such SQL Security by 
+    - <SQL_easy> not complete yet Soon i will add some Features such SQL Security by
     	encode passwords by some algorithms and filter the Query to prenvent SQL-injection
 
 
@@ -19,7 +19,7 @@ easy way to deal with MYSQL server by using commands on terminal
 To install it from [Python][]'s site **OR** `sudo (apt-get|yum) install python ` for linux.
 
 [MySQLdb][] library for Python **is required**
-To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mysqldb*` install  for linux. 
+To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mysqldb*` install  for linux.
 
 # Structure #
 ---
@@ -34,6 +34,33 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
 └── `/dump`
     *
     `{1} directories, {6} files `
+    <settings.py>
+        Module to set default configuration for connection to sql
+        server of database.
+
+    <hases.py>
+        Module to hashe data in database for security and it will be
+        option later.
+
+    <structure.py>
+        Module for DDL(Data Definition Language) commands that used to
+        build, alter, and drop database objects.
+
+    <dealway.py>
+        Module for DML(Data Manipulation Language) and DRL(Data Retrieval
+        Language) that used to manipilate data stored into database, it used
+        to insert, update, delete and retrieve data from database.
+
+    <SQL_easy>
+        Wrapper for the whole project to merge all modules for doing task for
+        user.
+
+    <dump/>
+        directory to save dumps of database on it.
+
+    <README.md>
+        it is look like manual for application for user to use it successfully.
+
 # Screen Shot #
 ---
 The first time you run application:
