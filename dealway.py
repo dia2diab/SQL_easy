@@ -74,11 +74,9 @@ class Dealing(object):
                 data[field] = raw_input('[*]Enter {0}: '.format(field))
                 data_tuple += (data[field], )
         fields.remove('Id')
-        fields = tuple(fields)
+        fields = str(tuple(fields)).replace("'", '')
         try:
             MySQL_Query = "insert into %s %s values %s" % (TableName, fields, data_tuple)
-            print MySQL_Query
-            exit()
             self.Cursor.execute(MySQL_Query)
             self.MyConnection.commit()
             print '[*]Addition Done.'
