@@ -39,7 +39,7 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
         Module to set default configuration for connection to sql
         server of database.
 
-    <hases.py>
+    <hashes.py>
         Module to hashe data in database for security and it will be
         option later.
 
@@ -52,7 +52,7 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
         Language) that used to manipilate data stored into database, it used
         to insert, update, delete and retrieve data from database.
 
-    <SQL_easy>
+    <SQL_easy.py>
         Wrapper for the whole project to merge all modules for doing task for
         user.
 
