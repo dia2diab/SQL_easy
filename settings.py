@@ -5,6 +5,8 @@
 
 import sys
 import readline
+from subprocess import Popen
+from platform import platform as OS
 
 try:
     import MySQLdb
@@ -24,9 +26,22 @@ def InitConnection():
     global PassWord
 
     if None in (HostName, UserName, PassWord):
-        print '[*]you must verify variables in setting.py to allow'
-        print '[*]programme to connect to MySQL>Line number (15, 16, 17)'
-        sys.exit()
+        print '[*] you must verify variables in settings.py to allow'
+        print '[*] programme to connect to MySQL>Line number (15, 16, 17)'
+        # fire up a text editor
+        choice = raw_input("\n[+] Should I fire up a text ediror for you (y/n)? ")
+        if choice == 'y':
+            if 'linux' in OS().lower():
+                    Popen('vi settings.py', shell=True).wait()
+            elif 'windows' in OS().lower():
+                Popen('notepad settings.py', shell=True).wait()
+            else:
+                msg = "[+] Could not detect the running OS "
+                msg += 'please, edit settings.py manually'
+                exit(msg)
+        else:
+            print "[+] Thanks for using SQL Easy"
+            sys.exit()
 
     try:
         MyConnection = MySQLdb.connect(
