@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
-#This script is a part of SQL_easy
-#written by DiaaDiab
+# This script is a part of SQL_easy
+# written by DiaaDiab
 
 import sys
 import readline
@@ -11,7 +11,7 @@ from platform import platform as OS
 try:
     import MySQLdb
 except:
-    print '[*]Install Module <MySQL> for python.'
+    print '[*] Install Module <MySQL> for python.'
     sys.exit()
 
 HostName = None   # remove None and set your host of MySQL server
@@ -50,12 +50,12 @@ def InitConnection():
                 passwd=PassWord
                 )
         Cursor = MyConnection.cursor()
-        print '[+]Connection done.'
-        print '[+]MySQL in your help !!'
+        print '[+] Connection done.'
+        print '[+] MySQL in your help !!'
 
     except:
-        print '[*]you have an error in your connection'
-        print '[*]make sure to verify parameters and try again'
+        print '[*] you have an error in your connection'
+        print '[*] make sure to verify parameters and try again'
         sys.exit()
 
     return (MyConnection, Cursor)

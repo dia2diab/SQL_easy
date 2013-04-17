@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
-#This script is a part of SQL_easy
-#written by DiaaDiab
+# This script is a part of SQL_easy
+# written by DiaaDiab
 
 
 def Encrypt(algo, text):
