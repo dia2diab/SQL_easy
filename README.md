@@ -34,6 +34,7 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
 └── `/dump`
     *
     `{1} directories, {6} files `
+
     <settings.py>
         Module to set default configuration for connection to sql
         server of database.
