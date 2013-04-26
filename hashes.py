@@ -1,7 +1,6 @@
 #! /usr/bin/env python
-
-# This script is a part of SQL_easy
-# written by DiaaDiab
+#This script is a part of SQL_easy
+#written by DiaaDiab
 
 
 def Encrypt(algo, text):
@@ -59,8 +58,15 @@ def _from_db(data):
     return Cracking(Rm_sulting(data))
 
 
+def secret(field):
+    if field in ("password", "pass", "passwd"):
+        return True
+    return False
+
+
 def main():
     pass
+
 
 if __name__ == '__main__':
     main()
