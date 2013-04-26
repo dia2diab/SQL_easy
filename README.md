@@ -40,8 +40,8 @@ To install it from [MySQLdb][] for windows **OR** `sudo (apt-get|yum) python-mys
         server of database.
 
     <hashes.py>
-        Module to hashe data in database for security and it will be
-        option later.
+        Module to hashe data in database for security and it hash password 
+        for diffrent way.
 
     <structure.py>
         Module for DDL(Data Definition Language) commands that used to
